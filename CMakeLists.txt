@@ -18,6 +18,7 @@ else()
 endif()
 
 if(WIN32)
+  set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
   target_sources(tiny-process-library PRIVATE process_win.cpp)
   #If compiled using MSYS2, use sh to run commands
   if(MSYS)
@@ -44,7 +45,11 @@ if(CMAKE_SOURCE_DIR STREQUAL "${CMAKE_CURRENT_SOURCE_DIR}")
   add_executable(examples examples.cpp)
   target_link_libraries(examples tiny-process-library)
   
-  install(TARGETS tiny-process-library EXPORT ${PROJECT_NAME}-config DESTINATION lib)
+  install(TARGETS tiny-process-library 
+    EXPORT ${PROJECT_NAME}-config 
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+    RUNTIME DESTINATION bin)
 
   install(EXPORT ${PROJECT_NAME}-config
     FILE ${PROJECT_NAME}-config.cmake
