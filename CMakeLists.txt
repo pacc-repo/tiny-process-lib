@@ -45,8 +45,8 @@ if(CMAKE_SOURCE_DIR STREQUAL "${CMAKE_CURRENT_SOURCE_DIR}")
   add_executable(examples examples.cpp)
   target_link_libraries(examples tiny-process-library)
   
-  install(TARGETS tiny-process-library 
-    EXPORT ${PROJECT_NAME}-config 
+  install(TARGETS tiny-process-library
+    EXPORT ${PROJECT_NAME}-config
     ARCHIVE DESTINATION lib
     LIBRARY DESTINATION lib
     RUNTIME DESTINATION bin)
