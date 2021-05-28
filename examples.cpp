@@ -1,4 +1,4 @@
-#include "process.hpp"
+#include <TinyProcessLib/Process>
 #include <iostream>
 
 using namespace std;

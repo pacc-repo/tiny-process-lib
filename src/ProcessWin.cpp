@@ -1,4 +1,7 @@
-#include "process.hpp"
+#ifdef PACC_SYSTEM_WINDOWS
+
+#include <TinyProcessLib/Process.hpp>
+
 // clang-format off
 #include <windows.h>
 // clang-format on
@@ -348,3 +351,5 @@ void Process::kill(id_type id, bool /*force*/) noexcept {
 }
 
 } // namespace TinyProcessLib
+
+#endif

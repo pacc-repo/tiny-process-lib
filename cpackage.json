@@ -1,0 +1,19 @@
+{
+	"name": "tiny-process-lib",
+	"type": "static lib",
+	"language": "C++11",
+	"includeFolders": {
+		"public": "include"
+	},
+	"files": [
+		"include/TinyProcessLib/**.hpp",
+		"src/**.cpp"
+	],
+	"filters": {
+		"system:windows": 	{ "defines": [ "PACC_SYSTEM_WINDOWS" ] },
+		"system:linux": 	{ "defines": [ "PACC_SYSTEM_LINUX" ] },
+		"system:macosx": 	{ "defines": [ "PACC_SYSTEM_MACOSX" ] }
+	},
+	"version": "2.0.4",
+	"description": "(PACC port of:) Tiny Process Library by Ole Christian Eidheim (@eidheim at GitLab)"
+}
