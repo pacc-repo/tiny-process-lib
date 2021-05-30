@@ -2,6 +2,7 @@
 installed/
 build/
 bin/
+.vscode/
 premake5.lua
 
 # https://github.com/github/gitignore/blob/master/CMake.gitignore
